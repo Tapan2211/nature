@@ -1,0 +1,111 @@
+/* banner section  */
+.hero-image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("https://websitedemos.net/love-nature-02/wp-content/uploads/sites/988/2021/11/services-hero.jpg");
+    height: 70vh;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+.hero_title {
+    font-size: 4.5rem;
+}
+
+/* service category section  */
+.sections{
+    margin-top: 3.5rem;
+}
+
+.service-div{
+    margin: 1.5rem;
+}
+
+.service-img{
+    border-radius: 3px;
+    height: 450px;
+
+}
+
+.service-title{
+    color: #536942;
+    font-size: 30px;
+}
+
+.service-des{
+    color: gray;
+    font-size: 14;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+}
+
+
+.buttons {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    color: gray;
+    margin-top: 2.5rem;
+}
+
+.buttons:hover {
+    border-color: greenyellow;
+    color: greenyellow;
+}
+
+/* testimonial section  */
+.testimonial{
+    height: auto;
+    /* background-color: #f6f8f5; */
+    background-color: #f6f8f5;
+    padding: 20px;
+    margin-top: 3.5rem;
+}
+
+.paragraph{
+    color: #536942;
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 3.5rem;
+}
+
+.paragraph-detail{
+    color: gray; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.par-title{
+    color: #536942;
+    font-size: 1rem;
+}
+
+.para-icon{
+    height: 70px;
+    width: 70px;
+
+}
+
+/* footer section  */
+.foot{
+    margin-top: 1.5rem;
+    padding: 10px;
+}
+
+.footer-image{
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+
+.foot-p{
+    color: #536942;
+    font-size: 14px;
+}
+
+.text-green {
+    color: #536942;
+}
+
