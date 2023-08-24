@@ -95,3 +95,9 @@
     color: #536942;
 }
 
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+}
