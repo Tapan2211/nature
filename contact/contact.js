@@ -62,3 +62,29 @@ function fetchFromData() {
 fetchFromData();
 
 
+async function fetchUserList(baseURL) {
+  const response = await fetch(baseURL);
+  const data = await response.json()
+  const finaldata = data.photos;
+
+  const userContainer = document.getElementById("users");
+  finaldata.forEach((element) => {
+    const { url } = element;
+
+    const userCard = document.createElement('div');
+    userCard.className = "col-6 col-lg-3 mb-4 position-relative";
+    console.log(url);
+    userCard.innerHTML = `
+    
+    <img class="testimonial-image"
+                        src=${url}
+                        alt="p1">
+    `
+
+    userContainer.appendChild(userCard);
+  })
+}
+
+const baseURL = "https://api.slingacademy.com/v1/sample-data/photos?offset=5&limit=4";
+fetchUserList(baseURL);
+

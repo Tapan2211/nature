@@ -34,10 +34,15 @@
 }
 
 .service-images {
-    height: 450px;
+    height: 350px;
     width: 100%;
     border-radius: 3px;
 }
+
+.service-images:hover {
+    -webkit-filter: brightness(50%);
+    /* transform: scale(1.1); */
+  }
 
 .service-text {
     color: #566942;
