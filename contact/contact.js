@@ -59,7 +59,7 @@ function fetchFromData() {
     });
 }
 
-fetchFromData();
+// fetchFromData();
 
 
 async function fetchUserList(baseURL) {
@@ -67,13 +67,17 @@ async function fetchUserList(baseURL) {
   const data = await response.json()
   const finaldata = data.photos;
 
+  let datas = userList(finaldata);
+  return datas;
+}
+
+function userList(finaldata) {
   const userContainer = document.getElementById("users");
   finaldata.forEach((element) => {
     const { url } = element;
 
     const userCard = document.createElement('div');
-    userCard.className = "col-6 col-lg-3 mb-4 position-relative";
-    console.log(url);
+    userCard.className = "col-6 col-lg-3 mb-4 position-relative flex-wrap";
     userCard.innerHTML = `
     
     <img class="testimonial-image"
@@ -82,8 +86,38 @@ async function fetchUserList(baseURL) {
     `
 
     userContainer.appendChild(userCard);
-  })
+  });
 }
+
+document.getElementById('submit').addEventListener('click', function () {
+
+  let name = document.getElementById('name').value;
+  let email = document.getElementById('email').value;
+  let comment = document.getElementById('comment').value;
+
+  //Javascript reGex for Email Validation.
+  var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+
+  if (name === "") {
+    alert("Enter username");
+  } else if (name.length < 5) {
+    alert("Minimun username less then 5");
+  } else if (email === "") {
+    alert("Enter email");
+  } else if (!regEmail.test(email)) {
+    alert("Please enter a valid e-mail address.");
+  } else if (comment === "") {
+    alert("Enter commnet");
+  } else{
+    const data = {
+      name: name,
+      email: email,
+      comment: comment
+    };
+    console.log(data);
+  }
+
+});
 
 const baseURL = "https://api.slingacademy.com/v1/sample-data/photos?offset=5&limit=4";
 fetchUserList(baseURL);
